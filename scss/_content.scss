@@ -23,14 +23,11 @@
          margin: 10px 0;
       }
    }
-
 }
 .center-content {
-
    &__title {
       font-weight: bold;
    }
-
 }
 .block-title {
    background: lightgray;
@@ -48,6 +45,36 @@
       padding: 15px;
       text-align: right;
       min-height: 153px;
+      svg {
+         stroke: black;
+      }
+      &:hover {
+         box-shadow: 3px 3px 4px 0px #6c6b6b;
+         transform: translateY(-5px) scaleX(1.1);
+         transition: all 0.6s ease 0s;
+         svg {
+            stroke: coral;
+            animation: bag 1.6s infinite 0s ease forwards;
+            transform-origin: top;
+         }
+      }
+   }
+}
+@keyframes bag {
+   0% {
+      transform: rotate(0deg);
+   }
+   25% {
+      transform: rotate(-30deg);
+   }
+   50% {
+      transform: rotate(30deg);
+   }
+   75% {
+      transform: rotate(-30deg);
+   }
+   100% {
+      transform: rotate(0deg);
    }
 }
 .left-block {
